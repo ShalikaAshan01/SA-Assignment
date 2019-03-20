@@ -2,7 +2,7 @@
 <?artifactRepository version='1.1.0'?>
 <repository name='C:\Program Files\eclipse\.eclipseextension' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='3'>
-    <property name='p2.timestamp' value='1552806557506'/>
+    <property name='p2.timestamp' value='1553049939387'/>
     <property name='org.eclipse.update.site.policy' value='USER-EXCLUDE'/>
     <property name='org.eclipse.update.site.list' value=''/>
   </properties>
@@ -11,7 +11,7 @@
     <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
-  <artifacts size='1166'>
+  <artifacts size='1170'>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.mylyn.ide_feature' version='3.24.2.v20180905-0014'>
       <properties size='1'>
         <property name='download.contentType' value='application/zip'/>
@@ -3855,6 +3855,16 @@
       <repositoryProperties size='2'>
         <property name='artifact.reference' value='file:/C:/Program%20Files/eclipse/plugins/com.google.inject_3.0.0.v201312141243.jar'/>
         <property name='file.name' value='C:\Program Files\eclipse\plugins\com.google.inject_3.0.0.v201312141243.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.jformdesigner' version='6.0.6.3'>
+      <properties size='1'>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/Program%20Files/eclipse/features/com.jformdesigner_6.0.6.3/'/>
+        <property name='file.name' value='C:\Program Files\eclipse\features\com.jformdesigner_6.0.6.3'/>
       </repositoryProperties>
     </artifact>
     <artifact classifier='org.eclipse.update.feature' id='org.eclipse.rcp' version='4.9.0.v20180906-1121'>
@@ -8407,6 +8417,16 @@
         <property name='file.name' value='C:\Program Files\eclipse\features\org.eclipse.epp.logging.aeri.feature_2.0.7.v20180504-0806'/>
       </repositoryProperties>
     </artifact>
+    <artifact classifier='osgi.bundle' id='com.jformdesigner' version='6.0.6.3'>
+      <properties size='2'>
+        <property name='artifact.size' value='6164869'/>
+        <property name='download.size' value='6164869'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/Program%20Files/eclipse/plugins/com.jformdesigner_6.0.6.3.jar'/>
+        <property name='file.name' value='C:\Program Files\eclipse\plugins\com.jformdesigner_6.0.6.3.jar'/>
+      </repositoryProperties>
+    </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup.editor' version='1.10.0.v20180821-1848'>
       <properties size='2'>
         <property name='artifact.size' value='433289'/>
@@ -11035,6 +11055,13 @@
         <property name='file.name' value='C:\Program Files\eclipse\plugins\org.eclipse.jst.ws.axis2.consumption.ui_1.0.200.v201802222200.jar'/>
       </repositoryProperties>
     </artifact>
+    <artifact classifier='osgi.bundle' id='com.jformdesigner.redist' version='6.0.6.3'>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/Program%20Files/eclipse/plugins/com.jformdesigner.redist_6.0.6.3/'/>
+        <property name='file.name' value='C:\Program Files\eclipse\plugins\com.jformdesigner.redist_6.0.6.3'/>
+      </repositoryProperties>
+    </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.emf.ant' version='2.10.0.v20180706-1146'>
       <properties size='2'>
         <property name='artifact.size' value='32595'/>
@@ -11173,6 +11200,16 @@
       <repositoryProperties size='2'>
         <property name='artifact.reference' value='file:/C:/Program%20Files/eclipse/plugins/org.eclipse.wst.jsdt.support.ie_1.0.601.v201602241911.jar'/>
         <property name='file.name' value='C:\Program Files\eclipse\plugins\org.eclipse.wst.jsdt.support.ie_1.0.601.v201602241911.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.jformdesigner.doc' version='6.0.6.3'>
+      <properties size='2'>
+        <property name='artifact.size' value='4418932'/>
+        <property name='download.size' value='4418932'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/Program%20Files/eclipse/plugins/com.jformdesigner.doc_6.0.6.3.jar'/>
+        <property name='file.name' value='C:\Program Files\eclipse\plugins\com.jformdesigner.doc_6.0.6.3.jar'/>
       </repositoryProperties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.datatools.connectivity' version='1.14.101.201807021805'>

@@ -65,6 +65,6 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return  brand + "," + model + "," + regNo + "," + type + "," + price;
+		return regNo + "," + brand + "," + model + "," + type + "," + price;
 	}
 }

@@ -8,4 +8,6 @@ public interface CarService {
 	 */
 	public boolean addNewCar();
 	public boolean removeCar();
+	public void displayAvailableCars();
+	public void displayReservedCars();
 }

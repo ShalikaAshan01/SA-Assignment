@@ -5,6 +5,8 @@
 	<item value="false" key="rcpPlugin"/>
 	<item value="true" key="osgiProject"/>
 	<item value="true" key="generatePluginActivator"/>
+	<section name="dependenciesView">
+	</section>
 	<section name="PDEFormActionManager">
 	</section>
 	<section name="org.eclipse.pde.ui.PLUGIN_STATUS_DIALOG">

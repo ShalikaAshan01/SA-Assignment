@@ -1,7 +1,8 @@
 #encoding=UTF-8
 #version=1
-ServicePublish,1.0.0.qualifier,file:/C:/Users/Shalika%20Ashan/OneDrive/SLIIT/SA/Assignment01/ServicePublish/,4,true
-ServiceSubscriber,1.0.0.qualifier,file:/C:/Users/Shalika%20Ashan/OneDrive/SLIIT/SA/Assignment01/ServiceSubscriber/,4,true
+CarService,1.0.0.qualifier,file:/C:/Users/Shalika%20Ashan/Documents/SLIIT/3rd%20Year/SA/SA-Assignment/CarService/,4,true
+Client,1.0.0.qualifier,file:/C:/Users/Shalika%20Ashan/Documents/SLIIT/3rd%20Year/SA/SA-Assignment/Client/,4,true
+FileOperator,1.0.0.qualifier,file:/C:/Users/Shalika%20Ashan/Documents/SLIIT/3rd%20Year/SA/SA-Assignment/FileOperator/,4,true
 ch.qos.logback.classic,1.0.7.v20121108-1250,file:/C:/Program%20Files/eclipse/plugins/ch.qos.logback.classic_1.0.7.v20121108-1250.jar,4,true
 ch.qos.logback.core,1.0.7.v20121108-1250,file:/C:/Program%20Files/eclipse/plugins/ch.qos.logback.core_1.0.7.v20121108-1250.jar,4,true
 ch.qos.logback.slf4j,1.0.7.v201505121915,file:/C:/Program%20Files/eclipse/plugins/ch.qos.logback.slf4j_1.0.7.v201505121915.jar,4,false

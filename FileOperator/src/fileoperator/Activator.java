@@ -10,13 +10,13 @@ public class Activator implements BundleActivator {
 	 * (non-Javadoc)
 	 * @see org.osgi.framework.BundleActivator#start(org.osgi.framework.BundleContext)
 	 */
-//	ServiceRegistration serviceRegistration;
+	ServiceRegistration serviceRegistration;
 	
 	public void start(BundleContext bundleContext) throws Exception {
 		System.out.println("Startning new file operator");
-//		CSVFile file = new CSVFile();
-//		serviceRegistration = bundleContext.registerService(
-//				CSVFile.class.getName(), file, null);
+		CSVFile file = new CSVFile();
+		serviceRegistration = bundleContext.registerService(
+				CSVFile.class.getName(), file, null);
 	}
 
 	/*
@@ -25,6 +25,6 @@ public class Activator implements BundleActivator {
 	 */
 	public void stop(BundleContext bundleContext) throws Exception {
 		System.out.println("Stop the file operator");
-//		serviceRegistration.unregister();
+		serviceRegistration.unregister();
 	}
 }

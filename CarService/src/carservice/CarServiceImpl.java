@@ -1,5 +1,7 @@
 package carservice;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 import fileoperator.CSVFile;
@@ -10,6 +12,9 @@ public class CarServiceImpl implements CarService {
 	
 	public CarServiceImpl(CSVFile csv) {
 		csvFile = csv;
+		csvFile.createFirestCSV(Car.getAvailablecarscsv(), "RegNo,Brand,Model,Type,price");
+		csvFile.createFirestCSV(Car.getCarlistcsv(), "RegNo,Brand,Model,Type,price");
+		csvFile.createFirestCSV(Car.getReservedcarcsv(), "RegNo,Brand,Model,Type,price");
 	}
 	
 	
@@ -21,7 +26,7 @@ public class CarServiceImpl implements CarService {
 			System.out.println("Reserved a car");
 			return true;
 		}else {
-			System.out.println("Not Available");
+			System.out.println("This car is not available");
 			return false;
 		}
 	}
@@ -34,7 +39,7 @@ public class CarServiceImpl implements CarService {
 			System.out.println("Add available car");
 			return true;
 		}else {
-			System.out.println("Not Available");
+			System.out.println("This car is not in reserved list");
 			return false;
 		}
 	}
@@ -75,24 +80,76 @@ public class CarServiceImpl implements CarService {
 
 
 	@Override
-	public boolean removeCar() {
-		System.out.println("Remove new Car");
+	public boolean removeCar(String regNo) {
+		csvFile.modifyCSV(regNo, Car.getAvailablecarscsv());
+		csvFile.modifyCSV(regNo, Car.getCarlistcsv());
+		csvFile.modifyCSV(regNo, Car.getReservedcarcsv());
+		System.out.println("Remove Car");
 		return true;
 	}
 
 
 	@Override
+	public ArrayList<String[]> getAllCars() {
+		return csvFile.readCSV(Car.getCarlistcsv());
+	}
+
+
+	@Override
+	public ArrayList<String[]> getReservedCars() {
+		// TODO Auto-generated method stub
+		return csvFile.readCSV(Car.getReservedcarcsv());		
+	}
+
+	@Override
+	public ArrayList<String[]> getAvailableCars() {
+		return csvFile.readCSV(Car.getAvailablecarscsv());
+	}
+
+
+	@Override
 	public void displayAvailableCars() {
-		System.out.println("---Displaying Available Cars");
-		csvFile.readCSV(Car.getCarlistcsv());
+		ArrayList<String[]> carlist = getAvailableCars();
+		
+
+		System.out.println("---Displaying Available Cars---");
+		
+		for(int i=0; i<carlist.size(); i++) {
+			System.out.println("Registration Number: " + carlist.get(i)[0] + ", Brand: " + carlist.get(i)[1]
+					+ ", Model: " + carlist.get(i)[2] + ", Type: " + carlist.get(i)[3] + ", LKR per km: " + carlist.get(i)[4]);
+		}
+		
+		
 	}
 
 
 	@Override
 	public void displayReservedCars() {
-		// TODO Auto-generated method stub
-		System.out.println("---Displaying Reserved Cars");
+		ArrayList<String[]> carlist = getReservedCars();
 		
+
+		System.out.println("---Displaying Available Cars---");
+		
+		for(int i=0; i<carlist.size(); i++) {
+			System.out.println("Registration Number: " + carlist.get(i)[0] + ", Brand: " + carlist.get(i)[1]
+					+ ", Model: " + carlist.get(i)[2] + ", Type: " + carlist.get(i)[3] + ", LKR per km: " + carlist.get(i)[4]);
+		}
+		
+	}
+
+
+	@Override
+	public void displayAllCars() {
+		ArrayList<String[]> carlist = getAllCars();
+		
+
+		System.out.println("---Displaying Available Cars---");
+		
+		for(int i=0; i<carlist.size(); i++) {
+			System.out.println("Registration Number: " + carlist.get(i)[0] + ", Brand: " + carlist.get(i)[1]
+					+ ", Model: " + carlist.get(i)[2] + ", Type: " + carlist.get(i)[3] + ", LKR per km: " + carlist.get(i)[4]);
+		}
+
 	}
 
 }

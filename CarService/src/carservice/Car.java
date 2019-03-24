@@ -1,5 +1,10 @@
 package carservice;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Car {
 	/*
 	 * car model,car brand, registration number of the car,price per km and also type(petrol,diesel)
@@ -9,9 +14,9 @@ public class Car {
 	private final String regNo;
 	private final String type;
 	private double price;
-	private final static String CARLISTCSV= "C:/Users/Shalika Ashan/Documents/SLIIT/3rd Year/SA/csv/car/list.csv"; 
-	private final static String AVAILABLECARSCSV= "C:/Users/Shalika Ashan/Documents/SLIIT/3rd Year/SA/csv/car/available.csv"; 
-	private final static String RESERVEDCARCSV = "C:/Users/Shalika Ashan/Documents/SLIIT/3rd Year/SA/csv/car/reserved.csv"; 
+	private final static String CARLISTCSV= "csv/car/list.csv"; 
+	private final static String AVAILABLECARSCSV= "csv/car/available.csv"; 
+	private final static String RESERVEDCARCSV = "csv/car/reserved.csv"; 
 
 	
 	public Car(String model, String brand, String regNo, String type, double price) {

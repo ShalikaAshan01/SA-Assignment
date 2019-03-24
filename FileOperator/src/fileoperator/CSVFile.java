@@ -17,7 +17,17 @@ import java.util.HashMap;
 
 public class CSVFile {	
 	
-	public CSVFile() {	}
+	public CSVFile() {
+		
+		//Path p = Paths.get("C:/Users/Shalika Ashan/Documents/SLIIT/3rd Year/SA/csv");
+//		try {
+//			DosFileAttributes dos = Files.readAttributes(p, DosFileAttributes.class);
+//			Files.setAttribute(p, "dos:hidden", true);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+	}
 	
 	public void writeCSV(String values,String path) {
 		try (PrintWriter writer = new PrintWriter(
@@ -32,17 +42,14 @@ public class CSVFile {
 		}
 	}
 
-	public ArrayList<String[]> readCSV(String path) {
+	public void readCSV(String path) {
 		String line = "";
-		String cvsSplitBy = ",";		
-		
-		ArrayList<String[]> arrayList = new ArrayList<>();
-		
-		
+		String cvsSplitBy = ",";
+
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 
 			ArrayList<String> header = new ArrayList<>();
-			
+		
 			int count = 0;
 			while ((line = br.readLine()) != null) {
 
@@ -55,22 +62,25 @@ public class CSVFile {
 						header.add(linearray[i]);
 					}
 				}else {
-//					for(int i=0;i<header.size();i++) {
-//						System.out.print(header.get(i)+" = " + linearray[i] + ", ");
-//						System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaa" + header.size());
-						arrayList.add(linearray);
-//					}
+					for(int i=0;i<header.size();i++) {
+						System.out.print(header.get(i)+" = " + linearray[i] + ", ");
+					}
+					System.out.println();
 				}
+				
+//				System.out.println("Country [code= " + country[0] + " , name=" + country[1] + "]");
+
 			}
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return arrayList;
 
 	}
 	
 	public String modifyCSV(String id,String input){
+		
+		
 		
 		File inputFile = new File(input);
 		String temp = inputFile.getParentFile()+"/temp.csv";
@@ -125,22 +135,5 @@ public class CSVFile {
 			e.printStackTrace();
 		}
 		return null;
-	}
-	
-	public void createFirestCSV(String path,String values) {
-		File f = new File(path);
-
-		if(!f.exists()) { 
-			try (PrintWriter writer = new PrintWriter(
-					new FileWriter(path, true))) {
-				StringBuilder sb = new StringBuilder();
-				sb.append(values);
-				sb.append('\n');
-				writer.write(sb.toString());
-
-			} catch (IOException e) {
-				System.out.println(e.getMessage());
-			}
-		}
 	}
 }

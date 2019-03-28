@@ -14,9 +14,9 @@ public class Car {
 	private final String regNo;
 	private final String type;
 	private double price;
-	private final static String CARLISTCSV= "csv/car/list.csv"; 
-	private final static String AVAILABLECARSCSV= "csv/car/available.csv"; 
-	private final static String RESERVEDCARCSV = "csv/car/reserved.csv"; 
+	private final static String CARLISTCSV= "D:/csv/car/list.csv"; 
+	private final static String AVAILABLECARSCSV= "D:/csv/car/available.csv"; 
+	private final static String RESERVEDCARCSV = "D:/csv/car/reserved.csv"; 
 
 	
 	public Car(String model, String brand, String regNo, String type, double price) {

@@ -130,6 +130,11 @@ public class CSVFile {
 	public void createFirestCSV(String path,String values) {
 		File f = new File(path);
 
+		File parent = f.getParentFile();
+		if (!parent.exists() && !parent.mkdirs()) {
+		    throw new IllegalStateException("Couldn't create dir: " + parent);
+		}
+		
 		if(!f.exists()) { 
 			try (PrintWriter writer = new PrintWriter(
 					new FileWriter(path, true))) {

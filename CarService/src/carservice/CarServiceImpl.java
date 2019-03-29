@@ -81,11 +81,16 @@ public class CarServiceImpl implements CarService {
 
 	@Override
 	public boolean removeCar(String regNo) {
-		csvFile.modifyCSV(regNo, Car.getAvailablecarscsv());
-		csvFile.modifyCSV(regNo, Car.getCarlistcsv());
-		csvFile.modifyCSV(regNo, Car.getReservedcarcsv());
-		System.out.println("Remove Car");
-		return true;
+		if(csvFile.findline(regNo, Car.getCarlistcsv()) != null) {
+			csvFile.modifyCSV(regNo, Car.getAvailablecarscsv());
+			csvFile.modifyCSV(regNo, Car.getCarlistcsv());
+			csvFile.modifyCSV(regNo, Car.getReservedcarcsv());
+			System.out.println("Remove Car");
+			return true;
+		}else {
+			System.out.println("This car is not available");
+			return false;
+		}
 	}
 
 

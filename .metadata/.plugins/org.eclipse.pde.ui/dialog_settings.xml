@@ -16,6 +16,8 @@
 		<item value="483" key="DIALOG_X_ORIGIN"/>
 		<item value="112" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="PluginImportWizard">
+	</section>
 	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
 		<item value="true" key="ShowStatusLine"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
